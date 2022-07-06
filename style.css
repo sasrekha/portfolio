@@ -1,0 +1,440 @@
+/** GLOBAL STYLES **/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #313131;
+  width: 70%;
+}
+
+/** NAV BAR STYLES **/
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0rem;
+  text-align: center;
+}
+
+.nav-list-item,
+.current-nav {
+  width: 24%;
+}
+
+.nav-list-item a {
+  background-color: #7467b7;
+  border-radius: 0.3rem;
+  box-shadow: 2px 4px 2px 1px #171717;
+  color: #cccccc;
+  display: inline-block;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.nav-list-item a:hover {
+  background-color: #5e51a2;
+}
+
+.current-nav p {
+  background-color: #403d4e;
+  border-radius: 0.3rem;
+  box-shadow: 2px 4px 2px 1px #171717;
+  color: #ccc;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+/** MAIN CONTENT STYLES **/
+.main-content {
+  background-color: #414141;
+  border-radius: 0.2rem;
+  box-shadow: 2px 7px 5px 2px #171717;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-header,
+.main-subheader,
+.contact-header,
+.contact-list,
+.contact-paragraph {
+  color: #cccccc;
+  text-align: center;
+  font-family: monospace;
+}
+
+.main-header {
+  font-size: 4rem;
+  margin-bottom: 0rem;
+}
+
+.main-subheader {
+  font-size: 3rem;
+  margin-top: 0rem;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 0rem;
+  padding: 0rem;
+}
+
+.contact-list li {
+  font-size: 1rem;
+  list-style: none;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.contact-list li a {
+  background-color: #5a5a5a;
+  border-radius: 0.2rem;
+  box-shadow: 2px 3px 3px 2px #171717;
+  color: #ccc;
+  display: inline-block;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  text-align: center;
+  text-decoration: none;
+  width: 11rem;
+}
+
+.contact-list li a:hover {
+  background-color: #505050;
+}
+
+#avatar {
+  align-self: center;
+  border: 0.2rem solid #7467b7;
+  border-radius: 50%;
+  box-shadow: 2px 3px 3px 2px #171717;
+  height: 12rem;
+  width: 12rem;
+}
+
+
+/** BIO STYLES **/
+.bio-header,
+.bio-article-header,
+.bio-article-content {
+  color: #ccc;
+  font-family: monospace;
+}
+
+.bio-header {
+  font-size: 2rem;
+  margin-bottom: 0rem;
+}
+
+.bio-article {
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 2px 2px #171717;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+
+.bio-article-header {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.bio-article-content {
+  color: #adadad;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+
+/** PROJECTS STYLES **/
+@keyframes fade-in {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+
+.projects-header,
+.project-desc,
+.project-butn,
+.project-info {
+  color: #ccc;
+  font-family: monospace;
+}
+
+.projects-header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#projects-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.project-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 2px 2px #171717;
+  width: 40%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+#item-1 {
+  background-image: url('./pictures/minesweeper.png');
+}
+
+#item-2 {
+  background-image: url('./pictures/portal.png');
+}
+
+#item-3 {
+  background-image: url('./pictures/nursing-home.png');
+}
+
+#item-4 {
+  background-image: url('./pictures/coffee-shop.png');
+}
+
+.project-box:hover,
+#item-1:hover,
+#item-2:hover,
+#item-3:hover,
+#item-4:hover {
+  background-image: none;
+}
+
+.project-box:hover .project-desc,
+.project-box:hover .project-butn {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.project-desc,
+.project-butn {
+  opacity: 0%;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.project-desc {
+  color: #adadad;
+}
+
+.button {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.project-butn {
+  background-color: #7467b7;
+  border-radius: 0.2rem;
+  box-shadow: 1px 1px 1px 2px #171717;
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.project-butn:hover {
+  background-color: #403d4e;
+}
+
+.project-info {
+  margin-top: 0%;
+  font-size: 1rem;
+}
+
+
+/** SKILLS STYLES **/
+.skills-header,
+.skills-subheader,
+.skills-section ul li {
+  color: #ccc;
+  font-family: monospace;
+}
+
+.skills-header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.skills-article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.skills-section {
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 2px 2px #171717;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 30%;
+}
+
+.skills-subheader {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+/** MOBILE MEDIA QUERIES **/
+@media only screen and (max-width: 650px) {
+  /** GLOBAL STYLES **/
+  body {
+    width: 90%;
+  }
+
+  /** NAV BAR STYLES **/
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .current-nav p,
+  .nav-list-item a {
+    font-size: 0.6rem;
+  }
+
+  .current-nav,
+  .nav-list-item {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    width: 100%;
+  }
+
+  /** MAIN CONTENT STYLES **/
+  .main-header {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .main-subheader {
+    font-size: 1.5rem;
+  }
+
+  #avatar {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .contact-paragraph {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .contact-list {
+    flex-direction: column;
+  }
+
+  .contact-list li {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .contact-list li a {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  /** BIO STYLES **/
+  .bio-article {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .bio-article-header {
+    font-size: 1rem;
+  }
+
+  .bio-article-content {
+    font-size: 0.8rem;
+  }
+
+  /** PROJECT STYLES **/
+  #projects-section {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projects-header,
+  .project-info {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .project-desc {
+    font-size: 0.8rem;
+  }
+
+  .project-box {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 90%;
+  }
+
+  /** SKILLS STYLES **/
+  .skills-header {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .skills-article {
+    flex-direction: column;
+  }
+
+  .skills-section {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 90%;
+  }
+}
